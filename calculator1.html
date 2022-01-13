@@ -1,0 +1,62 @@
+<!DOCTYPE html> 
+
+<html> 
+
+<head> 
+
+	<title>calculator1</title> 
+<meta charset="UTF-8"> 
+<h1 align="center">Calculator</h1>
+
+
+ </head> 
+ 
+
+<body>
+ <script>
+ function sum(){
+ var a=~~document.getElementById("n1").value;
+ var b=~~document.getElementById("n2").value;
+ var c=a+b
+ document.getElementById("result").value = c;
+ }
+ function diff(){
+ var a=~~document.getElementById("n1").value;
+ var b=~~document.getElementById("n2").value;
+ var c=a-b
+ document.getElementById("result").value = c;
+ }
+ function multi(){
+ var a=~~document.getElementById("n1").value;
+ var b=~~document.getElementById("n2").value;
+ var c=a*b
+ document.getElementById("result").value = c;
+ }
+ 
+ function divis(){
+ var a=~~document.getElementById("n1").value;
+ var b=~~document.getElementById("n2").value;
+ var c=a/b
+ document.getElementById("result").value = c;
+ }
+ 
+ </script>
+ 
+ <div align="center" />
+ <input id="n1" value="0" />
+ <button onclick="sum();">+</button>
+ <input id="n2" value="0" />
+	<br> 
+<button onclick="diff();" >-</button>
+	<br>
+<button onclick="multi();" >*</button>
+	<br>
+<button onclick="divis();" >/</button>
+	<br>
+<input id="result" type="text" value=""  />
+ 
+ 
+</body>
+
+
+</html> 
