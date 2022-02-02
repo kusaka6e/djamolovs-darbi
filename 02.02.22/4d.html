@@ -1,0 +1,51 @@
+<!DOCTYPE html> 
+
+<html> 
+
+<head> 
+
+	<title>4d</title> 
+<meta charset="UTF-8"> 
+
+
+ </head> 
+ 
+
+<body>
+
+ <script>
+ function main(){
+ var a=~~window.prompt("Введите первое число");
+ var b=~~window.prompt("Введите второе число");
+ var c=~~window.prompt("Введите третье число");
+ if (b>a){
+ cache = a
+ a = b
+ b = cache
+ }
+ if (c>a){
+ cache = a
+ a = c
+ c = cache
+ }
+ if (c>b){
+ cache = b
+ b = c
+ c = cache
+ }
+ window.alert(a)
+ window.alert(b)
+ window.alert(c)
+ }
+
+ 
+ 
+ </script>
+ 
+<button onclick="main();">click</button>
+ 
+ 
+</body>
+
+
+</html> 
