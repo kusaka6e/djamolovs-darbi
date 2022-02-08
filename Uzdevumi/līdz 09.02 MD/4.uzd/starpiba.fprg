@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="denis"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-02-08 10:10:28 "/>
+        <attribute name="created" value="ZGVuaXM7REVTS1RPUC1LNjFQU0RLOzIwMjItMDItMDg7IjA5OjU5OjMzICI7Mjc5OA=="/>
+        <attribute name="edited" value="ZGVuaXM7REVTS1RPUC1LNjFQU0RLOzIwMjItMDItMDg7IjEwOjEwOjI4ICI7MTsyODg5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a" type="Real" array="False" size=""/>
+            <declare name="b" type="Real" array="False" size=""/>
+            <declare name="c" type="Real" array="False" size=""/>
+            <output expression="&quot;Ievadiet pirmo skaitli&quot;" newline="True"/>
+            <input variable="a"/>
+            <output expression="&quot;Ievadiet otro skaitli&quot;" newline="True"/>
+            <input variable="b"/>
+            <if expression="a&gt;b">
+                <then>
+                    <assign variable="c" expression="a-b"/>
+                    <output expression="&quot;Pirmais skaitlis ir liel&#257;ks neka otrs par&quot;" newline="True"/>
+                    <output expression="c" newline="True"/>
+                </then>
+                <else>
+                    <assign variable="c" expression="b-a"/>
+                    <output expression="&quot;Otrais skaitlis ir lielaks neka pirmais par&quot;" newline="True"/>
+                    <output expression="c" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,39 @@
+<!DOCTYPE html> 
+
+<html> 
+
+<head> 
+
+<title>kvadrātsākne</title> 
+
+<meta charset="UTF-8"> 
+<script>
+function main() {
+    var a;
+    var b;
+    
+    a =1*window.prompt('Enter a value for a');
+    if (a < 0) {
+        window.alert("Tāda darbība nav iespējama");
+    } else {
+        if (a > 0) {
+            b = Math.sqrt(a);
+            window.alert(b);
+        } else {
+            window.alert(0);
+        }
+    }
+}
+
+</script>
+</head> 
+
+  
+
+<body> 
+
+<button onclick="main()">click</button>
+
+</body> 
+
+</html> 

@@ -1,0 +1,45 @@
+<!DOCTYPE html> 
+
+<html> 
+
+<head> 
+
+<title>divciparu skaitļi</title> 
+
+<meta charset="UTF-8"> 
+<script>
+function main() {
+    var a;
+    var b;
+    var c;
+    var d;
+    var e;
+    
+    a =1*window.prompt('Ievadiet divciparu skaitli');
+    b = a / 10;
+    c = a % 10;
+    d = c / 10;
+    e = b - d;
+    if (e > c) {
+        window.alert("Ievadīts divciparu skaitlis ir dilstošs");
+    } else {
+        if (e == c) {
+            window.alert("Ievadīts divciparu skaitlis ir monotons");
+        } else {
+            window.alert("Ievadīts divciparu skaitlis ir augošs");
+        }
+    }
+}
+
+</script>
+</head> 
+
+  
+
+<body> 
+
+ <button onclick="main()">Click</button>
+
+</body> 
+
+</html> 

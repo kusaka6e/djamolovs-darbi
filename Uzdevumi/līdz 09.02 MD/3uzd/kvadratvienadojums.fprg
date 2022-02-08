@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="denis"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-02-08 09:59:29 "/>
+        <attribute name="created" value="ZGVuaXM7REVTS1RPUC1LNjFQU0RLOzIwMjItMDItMDg7IjA2OjI4OjMzICI7Mjc5MQ=="/>
+        <attribute name="edited" value="ZGVuaXM7REVTS1RPUC1LNjFQU0RLOzIwMjItMDItMDg7IjA5OjU5OjI5ICI7NjsyOTE2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a" type="Real" array="False" size=""/>
+            <declare name="b" type="Real" array="False" size=""/>
+            <declare name="c" type="Real" array="False" size=""/>
+            <declare name="d" type="Real" array="False" size=""/>
+            <declare name="e" type="Real" array="False" size=""/>
+            <declare name="x1" type="Real" array="False" size=""/>
+            <declare name="x2" type="Real" array="False" size=""/>
+            <input variable="a"/>
+            <input variable="b"/>
+            <input variable="c"/>
+            <assign variable="d" expression="b*b-4*a*c"/>
+            <if expression="d&gt;0">
+                <then>
+                    <assign variable="e" expression="sqrt(d)"/>
+                    <assign variable="x1" expression="(-b+e)/(2*a)"/>
+                    <assign variable="x2" expression="(-b-e)/(2*a)"/>
+                    <output expression="&quot;Pirma s&#257;kne&quot;" newline="True"/>
+                    <output expression="x1" newline="True"/>
+                    <output expression="&quot;Otra s&#257;kne&quot;" newline="True"/>
+                    <output expression="x2" newline="True"/>
+                </then>
+                <else>
+                    <if expression="d=0">
+                        <then>
+                            <assign variable="e" expression="sqrt(d)"/>
+                            <assign variable="x1" expression="(-b+e)/(2*a)"/>
+                            <output expression="&quot;&#352;im kvadr&#257;tvien&#257;dojumam ir tikai viena s&#257;kne&quot;" newline="True"/>
+                            <output expression="x1" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;&#352;im kvadr&#257;tvien&#257;dojumam nav s&#257;knes&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="denis"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-02-08 06:16:21 "/>
+        <attribute name="created" value="ZGVuaXM7REVTS1RPUC1LNjFQU0RLOzIwMjItMDItMDg7IjA2OjEyOjAzICI7Mjc4MQ=="/>
+        <attribute name="edited" value="ZGVuaXM7REVTS1RPUC1LNjFQU0RLOzIwMjItMDItMDg7IjA2OjE2OjIxICI7MTsyODkz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a" type="Real" array="False" size=""/>
+            <declare name="b" type="Real" array="False" size=""/>
+            <declare name="c" type="Real" array="False" size=""/>
+            <input variable="a"/>
+            <input variable="b"/>
+            <input variable="c"/>
+            <if expression="a+b&gt;c">
+                <then>
+                    <output expression="&quot;No &#353;iem nogrie&#382;&#326;iem var sast&#257;d&#299;t trijst&#363;ri&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;No &#353;iem nogrie&#382;&#326;iem nevar sast&#257;d&#299;t trijst&#363;ri&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

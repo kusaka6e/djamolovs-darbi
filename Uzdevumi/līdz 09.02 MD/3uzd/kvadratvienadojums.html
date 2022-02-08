@@ -1,0 +1,50 @@
+<!DOCTYPE html> 
+
+<html> 
+
+<head> 
+
+<title>kvadrātvienādojums</title> 
+
+<meta charset="UTF-8"> 
+<script>
+function main() {
+    var a;
+    var b;
+    var c;
+    var d;
+    var e;
+    var x1;
+    var x2;
+    
+    a =1*window.prompt('Enter a value for a');
+    b =1*window.prompt('Enter a value for b');
+    c =1*window.prompt('Enter a value for c');
+    d = b * b - 4 * a * c;
+    if (d > 0) {
+        e = Math.sqrt(d);
+        x1 = (-b + e) / (2 * a);
+        x2 = (-b - e) / (2 * a);
+        window.alert("Pirma sākne ir");
+        window.alert(x1);
+        window.alert("Otra sākne ir");
+        window.alert(x2);
+    } else {
+        if (d == 0) {
+            e = Math.sqrt(d);
+            x1 = (-b + e) / (2 * a);
+            window.alert("Šim kvadrātvienādojumam ir tikai viena sākne");
+            window.alert(x1);
+        } else {
+            window.alert("Šim kvadrātvienādojumam nav sāknes");
+        }
+    }
+}
+
+</script>
+</head> 
+<body> 
+<button onclick="main()">click</button>
+</body> 
+
+</html> 
