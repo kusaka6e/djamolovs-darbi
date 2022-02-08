@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="djamolovs"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-02-02 09:56:06 priek&#353;p."/>
+        <attribute name="created" value="ZGphbW9sb3ZzO0RYMDIwNDgzMjA7MjAyMi0wMi0wMjswOTo0Mzo1MCBwcmlla8WhcC47MzcwMg=="/>
+        <attribute name="edited" value="ZGphbW9sb3ZzO0RYMDIwNDgzMjA7MjAyMi0wMi0wMjswOTo1NjowNiBwcmlla8WhcC47MTszODE1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a" type="Integer" array="False" size=""/>
+            <declare name="b" type="Integer" array="False" size=""/>
+            <declare name="c" type="Integer" array="False" size=""/>
+            <input variable="a"/>
+            <input variable="b"/>
+            <input variable="c"/>
+            <if expression="(a&gt;b)&amp;&amp;(a&gt;c)">
+                <then>
+                    <if expression="b&gt;c">
+                        <then>
+                            <output expression="a" newline="True"/>
+                            <output expression="b" newline="True"/>
+                            <output expression="c" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="a" newline="True"/>
+                            <output expression="c" newline="True"/>
+                            <output expression="b" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <if expression="(b&gt;a)&amp;&amp;(b&gt;c)">
+                        <then>
+                            <if expression="a&gt;c">
+                                <then>
+                                    <output expression="b" newline="True"/>
+                                    <output expression="a" newline="True"/>
+                                    <output expression="c" newline="True"/>
+                                </then>
+                                <else>
+                                    <output expression="b" newline="True"/>
+                                    <output expression="c" newline="True"/>
+                                    <output expression="a" newline="True"/>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <if expression="(c&gt;a)&amp;&amp;(c&gt;b)">
+                                <then>
+                                    <if expression="a&gt;b">
+                                        <then>
+                                            <output expression="c" newline="True"/>
+                                            <output expression="a" newline="True"/>
+                                            <output expression="b" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <output expression="c" newline="True"/>
+                                            <output expression="b" newline="True"/>
+                                            <output expression="a" newline="True"/>
+                                        </else>
+                                    </if>
+                                </then>
+                                <else/>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
