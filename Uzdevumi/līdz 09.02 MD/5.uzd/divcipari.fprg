@@ -4,9 +4,10 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="denis"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2022-02-08 10:58:30 "/>
+        <attribute name="saved" value="2022-02-09 09:17:54 priek&#353;p."/>
         <attribute name="created" value="ZGVuaXM7REVTS1RPUC1LNjFQU0RLOzIwMjItMDItMDg7IjEwOjExOjM0ICI7Mjc3OQ=="/>
         <attribute name="edited" value="ZGVuaXM7REVTS1RPUC1LNjFQU0RLOzIwMjItMDItMDg7IjEwOjU4OjMwICI7MTsyODk0"/>
+        <attribute name="edited" value="ZGphbW9sb3ZzO0RYMDIwNDgzMjA7MjAyMi0wMi0wOTswOToxNzo1NCBwcmlla8WhcC47MTszODIy"/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
@@ -22,17 +23,24 @@
             <assign variable="c" expression="a%10"/>
             <assign variable="d" expression="c/10"/>
             <assign variable="e" expression="b-d"/>
-            <if expression="e&gt;c">
+            <if expression="(a&gt;=100)">
                 <then>
-                    <output expression="&quot;Ievad&#299;ts divciparu skaitlis ir dilsto&#353;s&quot;" newline="True"/>
+                    <output expression="&quot;J&#363;s ievad&#257;t nedivciparu skaitli&quot;" newline="True"/>
                 </then>
                 <else>
-                    <if expression="e=c">
+                    <if expression="e&gt;c">
                         <then>
-                            <output expression="&quot;Ievad&#299;ts divciparu skaitlis ir monotons&quot;" newline="True"/>
+                            <output expression="&quot;Ievad&#299;ts divciparu skaitlis ir dilsto&#353;s&quot;" newline="True"/>
                         </then>
                         <else>
-                            <output expression="&quot;Ievad&#299;ts divciparu skaitlis ir augo&#353;s&quot;" newline="True"/>
+                            <if expression="e=c">
+                                <then>
+                                    <output expression="&quot;Ievad&#299;ts divciparu skaitlis ir monotons&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;Ievad&#299;ts divciparu skaitlis ir augo&#353;s&quot;" newline="True"/>
+                                </else>
+                            </if>
                         </else>
                     </if>
                 </else>
