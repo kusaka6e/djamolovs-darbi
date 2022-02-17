@@ -1,0 +1,45 @@
+<!DOCTYPE html> 
+
+<html> 
+
+<head> 
+
+<title>timeDate</title> 
+
+
+<script>
+
+
+function dayz() {
+
+  const today = new Date();
+  let h = today.getHours();
+  let m = today.getMinutes();
+  let s = today.getSeconds();
+  let d = today.getDay();
+  ду
+  /*m = checkTime(m);
+  s = checkTime(s);*/
+  document.getElementById('time').innerHTML =  h + ":" + m + ":" + s;
+ /* setTimeout(startTime, 1000);*/
+  document.getElementById('date').innerHTML =  d;
+
+}
+
+
+</script>
+
+
+</head> 
+
+<body onload="dayz();" align="center" bgcolor="#E8C962">
+<h1 align="center"> Time&Date </h1>
+<meta charset="UTF-8"> 
+<div style="font-size:22px" id="time"; align="center"> </div> 
+<div style="font-size:18px" id="date"; align="center"> </div> 
+
+
+
+</body> 
+
+</html> 
