@@ -1,0 +1,42 @@
+<!DOCTYPE html> 
+
+<html> 
+
+<head> 
+
+<title>main</title> 
+
+<meta charset="UTF-8"> 
+<script>
+function main2() {
+var a;
+    a = window.prompt('Enter a value for a');
+	}
+ function main() {
+    var z;
+	var b;
+	var a;
+	b = a*-1;
+	if (b > 0){
+        for (z = b; z > 0; z--) {
+            document.write(z + ", ");
+			setTimeout(main, 1000);
+        }
+	} else {
+		window.alert("END");
+		}
+	
+     
+}
+
+ 
+</script>
+</head> 
+
+  
+
+<body onload="main2();"> 
+<button onclick="main();">Click</button>
+</body> 
+
+</html> 

@@ -1,0 +1,43 @@
+<!DOCTYPE html> 
+
+<html> 
+
+<head> 
+
+<title>test</title> 
+
+<meta charset="UTF-8"> 
+<script>
+function main(){
+	var a;
+	var b;
+	var c;
+	c = Math.round(Math.random() * 1+1);
+
+	switch (c) {
+	case 1:
+	document.getElementById("pic").src = "imgs/sad.png";
+	alert("No, you won't.");
+	break;
+	case 2:
+	document.getElementById("pic").src = "imgs/happy.png";
+	alert("Yes, you will.");
+	break;
+	default:
+	document.getElementById("pic").src = "imgs/neitral.png";
+}
+}
+</script>
+</head> 
+
+  
+
+<body>
+<div align="center"> 
+<img src="imgs/neitral.png" id="pic" style="width:200px;height:200px">
+<p id="number"> </p>
+<button onclick="main();">Will you be happy today?</button>
+</div>
+</body> 
+
+</html> 
