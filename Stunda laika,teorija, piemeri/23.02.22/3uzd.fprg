@@ -4,9 +4,9 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="djamolovs"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2022-02-23 09:52:05 priek&#353;p."/>
+        <attribute name="saved" value="2022-02-23 09:54:04 priek&#353;p."/>
         <attribute name="created" value="ZGphbW9sb3ZzO0RYMDIwNDgzMjA7MjAyMi0wMi0yMzswOTozNjo1MiBwcmlla8WhcC47MzcwOQ=="/>
-        <attribute name="edited" value="ZGphbW9sb3ZzO0RYMDIwNDgzMjA7MjAyMi0wMi0yMzswOTo1MjowNSBwcmlla8WhcC47MTszODEz"/>
+        <attribute name="edited" value="ZGphbW9sb3ZzO0RYMDIwNDgzMjA7MjAyMi0wMi0yMzswOTo1NDowNCBwcmlla8WhcC47MjszODE1"/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
@@ -15,7 +15,6 @@
             <declare name="b" type="Real" array="False" size=""/>
             <declare name="c" type="Real" array="False" size=""/>
             <declare name="d" type="Real" array="False" size=""/>
-            <declare name="e" type="Real" array="False" size=""/>
             <assign variable="d" expression="0"/>
             <input variable="a"/>
             <input variable="b"/>
