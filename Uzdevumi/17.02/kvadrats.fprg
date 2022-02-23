@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="denis"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-02-18 12:16:56 "/>
+        <attribute name="created" value="ZGVuaXM7REVTS1RPUC1LNjFQU0RLOzIwMjItMDItMTc7IjA5OjI4OjU4ICI7MjgwMQ=="/>
+        <attribute name="edited" value="ZGVuaXM7REVTS1RPUC1LNjFQU0RLOzIwMjItMDItMTg7IjEyOjE2OjU2ICI7MTsyODk5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a" type="Integer" array="False" size=""/>
+            <declare name="b" type="Integer" array="False" size=""/>
+            <declare name="c" type="Integer" array="False" size=""/>
+            <input variable="b"/>
+            <if expression="b&gt;0">
+                <then>
+                    <assign variable="b" expression="b*-1"/>
+                </then>
+                <else/>
+            </if>
+            <assign variable="c" expression="b*-1"/>
+            <for variable="a" start="b" end="c" direction="inc" step="1">
+                <breakpoint/>
+                <output expression="a" newline="True"/>
+                <output expression="a^2" newline="True"/>
+            </for>
+            <output expression="&quot;END&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
