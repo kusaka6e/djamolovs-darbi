@@ -1,0 +1,44 @@
+<!DOCTYPE html> 
+
+<html> 
+
+<head> 
+
+<title>main</title> 
+
+<meta charset="UTF-8"> 
+<script>
+function main() {
+    var st;
+    var end;
+    var nepara;
+    
+    nepara = 0;
+    var para;
+    
+    para = 0;
+    var a;
+    
+    st = window.prompt('Enter a value for st');
+    end = window.prompt('Enter a value for end');
+    for (a = st; a <= end; a++) {
+        if (a % 2 == 0) {
+            para = para + 1;
+        } else {
+            nepara = nepara + 1;
+        }
+    }
+    window.alert(para );
+    window.alert(nepara );
+}
+
+</script>
+</head> 
+
+  
+
+<body> 
+<button onclick="main();">Click</button>
+</body> 
+
+</html> 
