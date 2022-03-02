@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="djamolovs"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-02-25 08:54:27 priek&#353;p."/>
+        <attribute name="created" value="ZGphbW9sb3ZzO0RYMDIwNDg1NjE7MjAyMi0wMi0yNTswODozMjoxMSBwcmlla8WhcC47MzcwOA=="/>
+        <attribute name="edited" value="ZGphbW9sb3ZzO0RYMDIwNDg1NjE7MjAyMi0wMi0yNTswODo1NDoyNyBwcmlla8WhcC47MTszODI3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="st" type="Real" array="False" size=""/>
+            <declare name="end" type="Real" array="False" size=""/>
+            <declare name="nepara" type="Real" array="False" size=""/>
+            <assign variable="nepara" expression="0"/>
+            <declare name="para" type="Real" array="False" size=""/>
+            <assign variable="para" expression="0"/>
+            <declare name="a" type="Real" array="False" size=""/>
+            <input variable="st"/>
+            <input variable="end"/>
+            <for variable="a" start="st" end="end" direction="inc" step="1">
+                <if expression="a%2==0">
+                    <then>
+                        <assign variable="para" expression="para+1"/>
+                    </then>
+                    <else>
+                        <assign variable="nepara" expression="nepara+1"/>
+                    </else>
+                </if>
+            </for>
+            <output expression="para" newline="True"/>
+            <output expression="nepara" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

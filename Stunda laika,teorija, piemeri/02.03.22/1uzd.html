@@ -1,0 +1,41 @@
+<!DOCTYPE html> 
+
+<html> 
+
+<head> 
+
+<title>main</title> 
+
+<meta charset="UTF-8"> 
+<script>
+function main() {
+    var n;
+    var nn;
+    var d;
+    var x;
+    var k;
+    
+    k = 0;
+    d = 0;
+    n = 1*window.prompt('Enter a value for n');
+    nn = n * 100;
+    x = 1*window.prompt('Enter a value for x');
+    while (k < nn) {
+        d = d + 1;
+        k = k + x;
+        x = x * 2;
+    }
+    window.alert(k);
+    window.alert(d - 1);
+}
+
+</script>
+</head> 
+
+  
+
+<body> 
+<button onclick="main();">Click</button>
+</body> 
+
+</html> 

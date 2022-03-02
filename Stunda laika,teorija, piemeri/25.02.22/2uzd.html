@@ -1,0 +1,44 @@
+<!DOCTYPE html> 
+
+<html> 
+
+<head> 
+
+<title>main</title> 
+
+<meta charset="UTF-8"> 
+<script>
+function main() {
+    var st;
+    var end;
+    var a;
+    var parasum;
+    var neparasum;
+    parasum = 0;
+    neparasum = 0;
+    st = 1*window.prompt('Enter a value for st');
+    end = 1*window.prompt('Enter a value for end');    
+    
+
+    for (a = st; a <= end; a++) {
+        if (a % 2 == 0) {
+            parasum = parasum + a;
+        } else {
+            neparasum = neparasum + a;
+        }
+    }
+    window.alert(parasum);
+    window.alert(neparasum);
+}
+
+
+</script>
+</head> 
+
+  
+
+<body> 
+<button onclick="main();">Click</button>
+</body> 
+
+</html> 

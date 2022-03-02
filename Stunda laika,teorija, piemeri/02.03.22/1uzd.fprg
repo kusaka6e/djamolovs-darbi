@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="djamolovs"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-03-02 09:35:23 priek&#353;p."/>
+        <attribute name="created" value="ZGphbW9sb3ZzO0RYMDIwNDgzMjA7MjAyMi0wMy0wMjswODozNDoxMyBwcmlla8WhcC47MzcwMQ=="/>
+        <attribute name="edited" value="ZGphbW9sb3ZzO0RYMDIwNDgzMjA7MjAyMi0wMy0wMjswOTozNToyMiBwcmlla8WhcC47MTszODEx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="N" type="Integer" array="False" size=""/>
+            <declare name="nn" type="Integer" array="False" size=""/>
+            <declare name="D" type="Integer" array="False" size=""/>
+            <declare name="x" type="Integer" array="False" size=""/>
+            <declare name="K" type="Integer" array="False" size=""/>
+            <assign variable="K" expression="0"/>
+            <assign variable="D" expression="0"/>
+            <input variable="N"/>
+            <assign variable="nn" expression="N*100"/>
+            <input variable="x"/>
+            <while expression="K&lt;nn">
+                <assign variable="D" expression="D+1"/>
+                <assign variable="K" expression="K+x"/>
+                <assign variable="x" expression="x*2"/>
+            </while>
+            <output expression="K" newline="True"/>
+            <output expression="D-1" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
