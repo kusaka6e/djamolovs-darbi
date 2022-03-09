@@ -1,0 +1,54 @@
+<!DOCTYPE html> 
+
+<html> 
+
+<head> 
+
+<title>main</title> 
+
+<meta charset="UTF-8"> 
+<script>
+ function main() {
+	var a;
+	var i;
+	var atb=0;
+	var str="";
+	a = window.prompt('Enter value for a:');
+	i=a.length;
+	while(i<a.length) {
+		atb=atb+parseInt(a[i]);
+		i++;
+		
+	}
+	alert(atb);
+	/*for (i=0; i<a.length; i++) {
+		alert(a[i]);
+		atb=atb+parseInt(a[i]);
+		alert(atb);
+	}*/
+ }
+ 
+ function main2() {
+	var a;	
+	var i;
+	var atb=0;
+	a = window.prompt('Enter value for a:');
+	i=parseInt(a.length);
+	for (i=0; i<le; i++) {
+	str=a%10;
+	atb+=str;
+	a=Math.floor(a/10);
+	}
+	alert(atb);
+	}
+</script>
+</head> 
+
+  
+
+<body> 
+<button onclick="main();">Click</button>
+<button onclick="main2();">Click2</button>
+</body> 
+
+</html> 
