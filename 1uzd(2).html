@@ -1,0 +1,51 @@
+<!DOCTYPE html> 
+
+<html> 
+
+<head> 
+
+<title>main</title> 
+
+<meta charset="UTF-8"> 
+<script>
+function main() {
+    var res=prompt("Kāds ir respondentu skaits","0");
+    var poz="";
+	var neg="";
+	var neitr="";
+	var atbpoz=0;
+	var atbneg=0;
+	var atbneitr=0;
+	var i;
+	
+	for (i=0; i<res; i++) {
+		atb=prompt("Atbilde (1; 0; -1)","0");
+		switch(atb) {
+		case "1":
+		atbpoz++;
+		break;
+		case "2":
+		atbneg++;
+		break;
+		default:	
+		atbneitr++;
+	}
+	}
+	document.getElementById("pozitīvs").innerHTML=atbpoz;
+	document.getElementById("negatīvs").innerHTML=atbneg;
+	document.getElementById("nav atbildes").innerHTML=atbneitr;
+	
+	
+}
+
+
+</script>
+</head> 
+
+  
+
+<body> 
+<button onclick="main();">Отвечай!</button>
+</body> 
+
+</html> 
