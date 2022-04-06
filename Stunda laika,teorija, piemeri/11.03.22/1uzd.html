@@ -1,0 +1,46 @@
+<!DOCTYPE html> 
+
+<html> 
+
+<head> 
+
+<title>main</title> 
+
+<meta charset="UTF-8"> 
+<script>
+function main() {
+    var res;
+    var atb;
+	var pos=0;
+	var neg=0;
+	var neitr=0;
+    res = window.prompt('Введите количество респондентов');
+    do {
+		atb = window.prompt('Ответ на вопрос 3(да), 0(нет ответа), 2(нет)');
+		if (atb="3") {
+		pos=pos+1;
+		}
+		if (atb="2") {
+		neg=neg+1;
+		}
+		if (atb="0") {
+		neitrl=neitr+1;
+		}
+        res = res - 1;
+     while (res > 0);
+}
+	alert(pos);
+	alert(neitr);
+	alert(neg);
+}
+
+</script>
+</head> 
+
+  
+
+<body> 
+<button onclick="main();">Отвечай!</button>
+</body> 
+
+</html> 
