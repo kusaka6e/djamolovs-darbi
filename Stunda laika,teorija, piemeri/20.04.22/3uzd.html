@@ -1,0 +1,36 @@
+<!DOCTYPE html> 
+
+<html> 
+
+<head> 
+
+<title>main</title> 
+
+<meta charset="UTF-8"> 
+
+</head> 
+
+  
+
+<body>
+<input type="range" min="0" max="600" value="0" id="dy" onchange="dh()">
+<input type="range" min="0" max="1000" value="0" id="dx" onchange="dh()">
+<canvas id="myCanvas" width="1000" height="600" style="border:1px solid #000000;">
+<div id="izvade"></div>
+</body> 
+<script>
+var x,y,w,h,cl;
+
+
+
+function dh(){
+var canvas =document.getElementById("myCanvas");
+	var ctx = canvas.getContext("2d");
+	w=document.getElementById("dx").value;
+	console.log(w);
+	ctx.clearRect(0, 0, 500, 500);
+	ctx.fillStyle = "green";
+	ctx.fillRect(w, w, 20 ,20)
+	}
+</script>
+</html> 

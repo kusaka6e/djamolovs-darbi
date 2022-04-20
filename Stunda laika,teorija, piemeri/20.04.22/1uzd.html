@@ -1,0 +1,28 @@
+<!DOCTYPE html> 
+
+<html> 
+
+<head> 
+
+<title>main</title> 
+
+<meta charset="UTF-8"> 
+<script>
+function dx() {
+var a;
+a=document.getElementById("d").value;
+document.getElementById("izvade").innerHTML="<p>"+a+"</p>";
+}
+
+</script>
+</head> 
+
+  
+
+<body>
+
+<input type="range" min="0" max="500" value="0" id="d" onchange="dx();">
+<div id="izvade"></div>
+</body> 
+
+</html> 
