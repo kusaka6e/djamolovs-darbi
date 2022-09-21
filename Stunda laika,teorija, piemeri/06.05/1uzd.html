@@ -1,0 +1,53 @@
+<!DOCTYPE html> 
+
+<html> 
+
+<head> 
+
+<title>main</title> 
+
+<meta charset="UTF-8"> 
+<script>
+var e=0;
+var f=0;
+var g=0;
+function main() {
+		var a=parseFloat(prompt("Введите ширину:"));
+		var b=prompt("Введите еденицу измерения ширины (m,cm,mm):");
+		var c=parseFloat(prompt("Введите длину:"));
+		var d=prompt("Введите еденицу измерения длины (m,cm,mm):");
+		if (b=="m") {
+			f=a/1;
+		 }
+		if (b=="cm") {
+			f=a/100;
+		 }
+		 if (b=="mm") {
+			f=a/1000;
+		 }
+		 if (d=="m") {
+			g=c/1;
+		 }
+		 if (d=="cm") {
+			g=c/100;
+		 }	
+		 if (d=="mm") {
+			g=c/1000;
+		 }
+		 square(f,g);
+		 alert(e);
+		}
+		function square(f,g) {
+			e=f*g;
+			return e;
+		}
+</script>
+</head> 
+
+  
+
+<body> 
+<button onclick="main()">Click</button>
+</body> 
+
+</html> 

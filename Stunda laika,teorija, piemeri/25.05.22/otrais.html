@@ -1,0 +1,68 @@
+<!DOCTYPE html> 
+
+<html> 
+
+<head> 
+
+<title>otrais</title> 
+
+<meta charset="UTF-8"> 
+<h1 align="center">2uzd</h1>
+<script>
+var a; b; abc; cukc; sumcen; cuks;
+a=0
+b=0
+var c= // Cena par vienu kilogramu (abols)
+var d= // Cena par vienu kilogramu (cukurs)
+cukc=0
+abc=0
+sumc=0
+function cukurs() {
+	a=~~document.getElementById("id1").value;
+	document.getElementById("iz1").innerHTML="<div>Cukurs kilogramos: "+a+"</div>";
+}
+function abols() {
+	b=1*document.getElementById("id3").value;
+	document.getElementById("iz2").innerHTML="<div>Aboli kilogramos: "+b+"</div>";
+}
+function cena(){
+	abc=a*d
+	cukc=b*c
+	sumc=abc+cukc
+	document.getElementById("iz3").innerHTML="<div>Cena summa ir: "+sumc+"</div>";
+}
+function cukcena() {
+	cukc=1*document.getElementById("id2").value;
+	document.getElementById("iz4").innerHTML="<div>Cukuru cena par vienu kilogramu: "+cukc+"</div>";
+}
+function cukcena() {
+	cuks=a*cukc
+	document.getElementById("iz5").innerHTML="<div>Cukuru cena: "+cuks+"</div>";
+}
+</script>
+</head> 
+
+  
+
+<body> 
+<div align="center">
+<input type="text" id="id1" value="Ievadiet cukuru skaitu(kg)"> <button onclick="cukurs()">Click</button>
+<input type="text" id="id2" value="Cena par vienu kg(cukurs)"> <button onclick="cukcena()">Click</button>
+<div id="iz4">Cukuru cena par vienu kilogramu:</div>
+<br>
+<div id="iz1">Cukurs kilogramos:</div>
+<br>
+<div id="iz5">Cena par cukuru:</div> <button onclick="cuksum()">Click</button>
+<br>
+<input type="text" id="id3" value="Ievadiet abolu skaitu(kg)"> <button onclick="abols()">Click</button>
+<br>
+<div id="iz2">Aboli kilogramos:</div>
+<button onclick="cena()">Saskaitit cenu</button>
+<div id="iz3">Par pirkumu jums ir jāmaksa:</div>
+<br>
+	<a href = "indexHTML.html">main page</a><BR>
+	<a href = "trešais.html">3 page</a><BR>
+</div> 
+</body> 
+
+</html> 

@@ -7,64 +7,14 @@
 <title>main</title> 
 
 <meta charset="UTF-8"> 
+<script>
 
+</script>
 </head> 
 
   
 
 <body> 
-<canvas id="myCanvas" width="300" height="300" style="border:1px solid #000000;"></canvas>
-
-<canvas id="Canvas" width="300" height="300" style="border:1px solid #000000;"></canvas>
-
-<canvas id="my" width="300" height="300" style="border:1px solid #000000;"></canvas>
-
-<canvas id="myC" width="300" height="300" style="border:1px solid #000000;"></canvas>
-
-<script>
-
-
-var canvas =document.getElementById("myCanvas");
-	var context = canvas.getContext("2d");
-	context.beginPath();
-	context.moveTo(70, 170);
-	context.lineTo(145, 70);
-	context.lineTo(220, 170);
-	context.closePath();
-	context.fillStyle = "purple";
-	context.fill();	
-	context.stroke();
-	
-	
-	var c=document.getElementById("Canvas");
-	var ctx = c.getContext("2d");
-	ctx.beginPath();
-	ctx.arc(150,150,75,0,2 * Math.PI);
-	ctx.fillStyle = "red";
-	ctx.fill();	
-	ctx.stroke();
-	
-	var canvas =document.getElementById("my");
-	var context = canvas.getContext("2d");
-	context.beginPath();
-	context.moveTo(50, 250);
-	context.lineTo(50, 50);
-	context.lineTo(250, 50);
-	context.lineTo(250, 250);
-	context.closePath();
-	context.fillStyle = "green";
-	context.fill();	
-	context.stroke();
-	
-	var canvas =document.getElementById("myC");
-	var context = canvas.getContext("2d");
-	context.moveTo(50, 150);
-	context.lineTo(250, 150);
-	context.strokeStyle = "blue";
-	context.stroke();
-	
-	
-</script>
 
 </body> 
 

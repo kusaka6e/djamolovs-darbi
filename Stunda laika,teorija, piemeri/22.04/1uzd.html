@@ -1,0 +1,45 @@
+<!DOCTYPE html> 
+
+<html> 
+
+<head> 
+
+<title>main</title> 
+
+<meta charset="UTF-8"> 
+<script>
+ var a;
+ var dis;
+ var x=0;
+ var y=0;
+function asking() {
+	a=window.prompt("Введите количество квадратов");
+}
+function counter() {
+	dis=1000/a;
+	cosole.log(dis);
+}
+function spawning() {
+	while (a!=0) {
+		a=a-1;
+		var canvas =document.getElementById("myCanvas");
+		var ctx = canvas.getContext("2d");
+		ctx.fillRect(x, y, 15 ,15);
+		x=x+dis;
+	}
+
+
+}
+</script>
+</head> 
+
+  
+
+<body> 
+<button onclick="asking()">Click</button>
+<button onclick="counter()">Count</button>
+<button onclick="spawning()">Spawn</button>
+<canvas id="myCanvas" width="1000" height="500" style="border:1px solid #000000;">
+</body> 
+
+</html> 
