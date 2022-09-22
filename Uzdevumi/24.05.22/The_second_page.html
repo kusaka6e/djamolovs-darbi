@@ -1,0 +1,65 @@
+<!DOCTYPE html> 
+
+<html> 
+
+<head> 
+
+<title>main</title> 
+
+<meta charset="UTF-8"> 
+<h1 align="center">2 page<h1>
+<script>
+var a; dis; r; i; x; sh;
+x=0
+function show() {
+sh=document.getElementById("rad").value;
+document.getElementById("izvade").innerHTML="<div>Ваш радиус:"+sh+"</div>";
+}
+function skok(){
+	i=parseInt(prompt("Сколько кругов?"));
+	r=document.getElementById("rad").value;
+	dis= r/i
+	
+}
+
+function spawn(){
+	x=0
+   for (a = i; a >= 0; a--) {
+	var canvas = document.getElementById("myCanvas"), 
+            context = canvas.getContext("2d");
+            context.strokeStyle = "black";
+            context.beginPath();
+            context.arc( 960, 250, x, 0, Math.PI*2, false);
+			x = dis + x
+            context.closePath();
+            context.stroke();
+			console.log(a);
+			console.log(x);
+}
+}
+</script>
+</head> 
+
+  
+
+<body style="background-color:#3CD2AA"> 
+
+<div align="center">
+	<br>
+	<input type="range" min="0" max="250" value="0" id="rad" onchange="show()"> 
+	<button onclick ="skok()">Количество</button>
+	<button onclick ="spawn()">Создать</button>
+	<input type="button" value="RESTART" onClick="document.location.reload(true)">
+	<br>
+	<div id="izvade">Ваш радиус:0</div>
+	<br>
+	<canvas  id="myCanvas" width="1920" height="600">
+	</canvas>
+	<br>
+	<a href = "Title.html">Title page</a><BR>
+	<a href = "The_first_page.html">1 page</a><BR>
+</div>
+
+</body> 
+
+</html> 
