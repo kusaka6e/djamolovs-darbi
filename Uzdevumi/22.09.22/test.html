@@ -1,0 +1,41 @@
+<!DOCTYPE html> 
+
+<html> 
+
+<head> 
+
+<title>main</title> 
+
+<meta charset="UTF-8"> 
+<script>
+function Sq(val) {
+          document.getElementById('valueS').value=val;  //Parāda ceļa vērtību
+        }
+		function tq(val) {
+          document.getElementById('valuet').value=val;  //Parāda laika vērtību
+        }
+		function tqh(val) {
+		document.getElementById('valuet')
+		var valueth = valuet/60;
+        }
+		function Vq(val) {
+          document.getElementById('valueV').value=val;  //Parāda ātruma vērtību
+        }
+		
+</script>
+</head> 
+
+  
+
+<body> 
+<input type="range" id="S" min="0" max="150" onchange="Sq(this.value);">Ceļš(km) <input  id="valueS" value="50"> <br>
+<input type="range" id="t" min="0" max="300" onchange="tq(this.value); tqh(this.value);">Laiks(min) <input  id="valuet" value="50"> Laiks(h)<input  id="valueth" value=""> <br>
+<input type="range" id="V" min="0" max="100" onchange="Vq(this.value);">Ātrums(km/h) <input  id="valueV" value="50"> <br>
+
+
+
+
+
+</body> 
+
+</html> 
