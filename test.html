@@ -1,0 +1,35 @@
+<!DOCTYPE html> 
+
+<html> 
+
+<head> 
+
+<title>main</title> 
+
+<meta charset="UTF-8"> 
+<script>
+    let ressp=60;
+    let resti=60;
+    let resdi=1;
+ function fun1(){
+    ressp=document.getElementById('sp').value;
+    resti=document.getElementById('ti').value;
+    resdi=document.getElementById('di').value;
+    console.log(ressp)
+    console.log(resti)
+    console.log(resdi)
+ }
+</script>
+</head> 
+
+  
+
+<body> 
+<div>
+    <input type="range" id="sp" value="60" onchange="fun1()"><label>speed, km/h</label><br>
+    <input type="range" id="ti" value="1" onchange="fun1()"><label>time, h</label><br>
+    <input type="range" id="di" value="60" onchange="fun1()"><label>distance, km</label><br>
+</div>
+</body> 
+
+</html> 
