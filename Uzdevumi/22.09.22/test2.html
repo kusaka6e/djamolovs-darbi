@@ -1,0 +1,67 @@
+<!DOCTYPE html> 
+
+<html> 
+
+<head> 
+
+<title>main</title> 
+
+<meta charset="UTF-8"> 
+<script>
+
+function Sq(val) {
+          document.getElementById('S').value=val;
+		  var a=document.getElementById('S').value;
+		  document.getElementById('resS').innerHTML=a+'km';
+		  document.getElementById('resS2').innerHTML=a+'km';
+        }
+		function tq(val) {
+          document.getElementById('t').value=val;
+		  var b=document.getElementById('t').value;
+		  document.getElementById('rest').innerHTML=b+'h';
+		  document.getElementById('rest2').innerHTML=b+'h';
+        }
+		function Vq(val) {
+          document.getElementById('V').value=val; 
+		  var c=document.getElementById('V').value;
+		  document.getElementById('resV').innerHTML=c+'km/h';
+		  document.getElementById('resV2').innerHTML=c+'km/h';
+        }
+</script>
+</head> 
+
+  
+
+<body> 
+<input type="range" min="0" max="150" onchange="Sq(this.value);">Ceļš(km) <input  id="S" value="50"> <br>
+<input type="range" min="0" max="150" onchange="tq(this.value);">Laiks(h) <input  id="t" value="50"> <br>
+<input type="range" min="0" max="100" onchange="Vq(this.value);">Ātrums(km/h) <input  id="V" value="50"> <br>
+<table>
+<tr>
+    <th>S<p id="resS">0km</p></th> <th><h2></h2></th><th>V<p id="resV">0km/h</p></th></th><th></th><th>S<p id="resS2">0km</p></th>
+  </tr>
+  <tr>
+  <th><canvas id="myCanvas" width="350" height="350" style="border:1px solid #d3d3d3;"></th><th>t<p id="rest">0h</p></th> <th><canvas id="myCanvas2" width="350" height="350" style="border:1px solid #d3d3d3;"></th><th>V<p id="resV2">0km/h</p></th> <th><canvas id="myCanvas3" width="350" height="350" style="border:1px solid #d3d3d3;"></th><th>t<p id="rest2">0h</p></th>
+  </tr>
+  <table>
+<script>
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.moveTo(350, 0);
+ctx.lineTo(0, 350);
+ctx.stroke();
+var c = document.getElementById("myCanvas2");
+var ctx = c.getContext("2d");
+ctx.moveTo(350, 0);
+ctx.lineTo(0, 350);
+ctx.stroke();
+var c = document.getElementById("myCanvas3");
+var ctx = c.getContext("2d");
+ctx.moveTo(350, 0);
+ctx.lineTo(0, 350);
+ctx.stroke();
+
+</script>
+</body> 
+
+</html> 
