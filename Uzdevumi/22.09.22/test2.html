@@ -9,23 +9,45 @@
 <meta charset="UTF-8"> 
 <script>
 
+function fun1() {
+if (document.getElementById("const1").checked){
+document.getElementById("speed").disabled = true;
+document.getElementById("time").disabled = false;
+document.getElementById("dist").disabled = false;
+}
+else if (document.getElementById("const2").checked){
+document.getElementById("time").disabled = true;
+document.getElementById("speed").disabled = false;
+document.getElementById("dist").disabled = false;
+}
+else if (document.getElementById("const3").checked){
+document.getElementById("dist").disabled = true;
+document.getElementById("speed").disabled = false;
+document.getElementById("time").disabled = false;
+		}
+	
+}
+
 function Sq(val) {
           document.getElementById('S').value=val;
 		  var a=document.getElementById('S').value;
 		  document.getElementById('resS').innerHTML=a+'km';
 		  document.getElementById('resS2').innerHTML=a+'km';
+		  document.getElementById('resS3').innerHTML=a+'km';
         }
 		function tq(val) {
           document.getElementById('t').value=val;
 		  var b=document.getElementById('t').value;
 		  document.getElementById('rest').innerHTML=b+'h';
 		  document.getElementById('rest2').innerHTML=b+'h';
+		  document.getElementById('rest3').innerHTML=b+'h';
         }
 		function Vq(val) {
           document.getElementById('V').value=val; 
 		  var c=document.getElementById('V').value;
 		  document.getElementById('resV').innerHTML=c+'km/h';
 		  document.getElementById('resV2').innerHTML=c+'km/h';
+		  ocument.getElementById('resV3').innerHTML=c+'km/h';
         }
 </script>
 </head> 
@@ -33,12 +55,12 @@ function Sq(val) {
   
 
 <body> 
-<input type="range" min="0" max="150" onchange="Sq(this.value);">Ceļš(km) <input  id="S" value="50"> <br>
-<input type="range" min="0" max="150" onchange="tq(this.value);">Laiks(h) <input  id="t" value="50"> <br>
-<input type="range" min="0" max="100" onchange="Vq(this.value);">Ātrums(km/h) <input  id="V" value="50"> <br>
+<input type="range" min="0"  id="dist" max="150" onchange="Sq(this.value);">Distance(km) <input  id="S" value="50"><input type="radio" name="Lcontact" id="const3" value="at" onchange="fun1();"><label for="LcontactChoice1">Distance const</label><br>
+<input type="range" min="0" id="time" max="150" onchange="tq(this.value);">Time(h) <input  id="t" value="50"><input type="radio" name="Lcontact" id="const2"  value="la" onchange="fun1();"> <label for="LcontactChoice2">Time const</label> <br>
+<input type="range" min="0" id="speed" max="100" onchange="Vq(this.value);">Speed(km/h) <input  id="V" value="50"><input type="radio" name="Lcontact" id="const1" value="at" onchange="fun1();"><label for="LcontactChoice1">Speed const</label> <br>
 <table>
 <tr>
-    <th>S<p id="resS">0km</p></th> <th><h2></h2></th><th>V<p id="resV">0km/h</p></th></th><th></th><th>S<p id="resS2">0km</p></th>
+    <th>S<p id="resS">0km</p></th> <th><h2></h2></th><th>S<p id="resS2">0km/h</p></th></th><th></th><th>V<p id="resV">0km</p></th>
   </tr>
   <tr>
   <th><canvas id="myCanvas" width="350" height="350" style="border:1px solid #d3d3d3;"></th><th>t<p id="rest">0h</p></th> <th><canvas id="myCanvas2" width="350" height="350" style="border:1px solid #d3d3d3;"></th><th>V<p id="resV2">0km/h</p></th> <th><canvas id="myCanvas3" width="350" height="350" style="border:1px solid #d3d3d3;"></th><th>t<p id="rest2">0h</p></th>
