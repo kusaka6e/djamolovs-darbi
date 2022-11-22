@@ -1,0 +1,46 @@
+<!DOCTYPE html> 
+
+<html> 
+
+<head> 
+
+<title>MASSIVE</title> 
+
+<meta charset="UTF-8"> 
+<script>
+    var abc;
+    let mas=[];
+    var res=""; 
+ function papild(){
+    abc=document.getElementById("piev").value;
+    mas.unshift(abc);
+      res="";
+      document.getElementById("piev").value = "";
+
+ } 
+  function izvade(){
+    for (let i=0; i<mas.length; i++) {
+    res=res + "<ul>" + "<li>" + mas[i] + "</li>" + "</ul>" ;
+    document.getElementById("izv").innerHTML = res;
+    
+    }
+   
+
+ } 
+
+ 
+</script>
+
+</head> 
+
+  
+
+<body> 
+<h1 align="center">MASSIVE</h1>
+<input type="text" id="piev"></input>
+<button onclick="papild();">Papildīt</button> 
+<button onclick="izvade();">Izvadīt</button>
+<p id="izv"></p>
+</body> 
+
+</html> 
