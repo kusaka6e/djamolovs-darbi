@@ -1,0 +1,59 @@
+<!DOCTYPE html> 
+
+<html> 
+
+<head> 
+
+<title>MASSIVE</title>
+
+<meta charset="UTF-8"> 
+
+<div align="center">
+      <h1 align="center">Massivu elementu pievienošana</h1>
+   </div>
+</head> 
+
+  
+
+<body> 
+<script>
+var array = [];
+
+function give() {
+            var a = 1 * document.getElementById("numbers").value;
+	for ( i = 0; i < a; i++ ) {
+			array.push( Math.round( Math.random() * 100 ));
+			}
+			document.getElementById('elem').innerHTML = "Jusu masīvs : " + array;
+			document.getElementById('numbers').value="";
+         }
+		 
+/*	function give() {
+		var a = 1 * document.getElementById("numbers").value;
+		for ( i = 0; i < a; i++ ) {
+			var b=( Math.round( Math.random() * 100 ));
+			document.getElementById('elem').innerHTML = "Jusu masīvs : " + b;
+			b=document.getElementById('elem').innerHTML = "Jusu masīvs : " + b;
+			}
+			
+			document.getElementById('numbers').value="";
+	
+	}*/
+function save(){
+			var blob = new Blob([JSON.stringify(array)], {type: "text/javascript"});
+			var link = document.createElement("a");
+			link.setAttribute("href", URL.createObjectURL(blob));
+			link.setAttribute("download", "massive.txt");
+			link.click();
+		 }
+		 
+		 
+</script>
+
+<div align="center">
+<input type="number" placeholder="Ciparu skaits" name="text" id="numbers" />
+<input type="button" id="Dot" value="Pievienot" onclick="give()"> <input type="button" id="Save" value="Save" onclick="save()">
+<h4 id="elem" maxlength="50"></h4>
+</body> 
+
+</html> 

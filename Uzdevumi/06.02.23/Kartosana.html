@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <div align="center">
+      <h1 align="center">Kārtošana masīvus elementus</h1>
+      <h2> Kas tāds masīva kārtošana algoritms?</h2>
+      <p><b>
+            Kārtošanas algoritms - tas ir algoritms, kas sastāv no instrukciju
+            sērijas, <br>
+            kuras pieņem masīvu ieeju datu kvalitātē, izpilda noteiktas
+            operācijas pār masīvu, <br> un izved nošķiroto masīvu.</b>
+      </p>
+      <h2>Burbuļa metode</h2>
+      <p><b>Šis kartošanas algoritms pārstāv algoritmu, kas ir izveidots uz
+            salīdzinājuma,<br> kurā ir salīdzināmi katra
+            pāris
+            kaimiņ elementi, un elementi mainās dažuviet, ja tie ir novietoti ne
+            pa kārtību.<br>
+            Burbuļa metode tā nosaukta tāpēc, ka aktivitātes masīvā pārvietojas vienā virzienā kā gaisa burbuļi ūdenī.
+         </b>
+      </p>
+      <h2> Kā strādā dotā programma</h2>
+      <p><b>
+            Programma strādā ar visām skaitļu ainām, <br> ja jūs ka to vedat
+            nekārtns programma par to sacīs, un paprasīs
+            ievest sākumā
+            no jauna. <br> Jūs varat izvēlēties šķirošanas ainu kurš jūs
+            interesē.<br>
+            <i> Jums vajadzīgs ievest vienu skaitli pēc tam uzspiest uz pogu
+               "Dot". <br>
+               M - mazas L - lielas</i></b>
+      </p>
+
+   </div>
+</head>
+
+<body>
+   <div align="center">
+
+      <script>
+         var array = [];
+         var unsortedArray = [];
+         var arrayReverse = [];
+
+         function give() {
+            var a = 1 * document.getElementById("numbers").value;
+            unsortedArray.push(" " + a);
+            array.push(a);
+            arrayReverse.push(a);
+
+            document.getElementById("textSort4").innerHTML = "Kopējs ciparu daudzums : " + array.length;
+            document.getElementById('textStock').innerHTML = "Jusu masīvs : " + unsortedArray;
+            document.getElementById('numbers').value = "";
+         }
+
+
+         function sort() {
+            var checkBox = document.getElementById("myCheck");
+            var text = document.getElementById("textSort");
+            for (var n = 0; n < array.length; n++) {
+               // Apejam masīvu
+               for (var i = 0; i < (array.length - n - 1); i++) {
+                  // Salīdzinām pāris skaitļus, kur ja pirmelements no pāra izrādās vairāk nekā elements kurš atrasties uz nākamās pozīcijas
+                  if (array[i] > array[i + 1]) {
+                     // Sakot ar 50 rindiņu elementu vietas maiņas algoritms līdz 53 rindiņa  
+                     var temp = array[i]
+                     array[i] = array[i + 1]
+                     array[i + 1] = temp
+                  }
+               }
+            }
+            if (checkBox.checked == true) {
+               text.innerHTML = "Kartošanas masīvs(No M līdz L) : " + array;
+               text.style.display = "block";
+            } else {
+               text.style.display = "none";
+            }
+         }
+
+         function sort1() {
+            var checkBox1 = document.getElementById("myCheck1");
+            var text1 = document.getElementById("textSort1");
+            for (var n = 0; n < arrayReverse.length; n++) {
+               for (var i = 0; i < (arrayReverse.length - n - 1); i++) {
+                  if (arrayReverse[i] < arrayReverse[i + 1]) {
+                     var temp = arrayReverse[i]
+                     arrayReverse[i] = arrayReverse[i + 1]
+                     arrayReverse[i + 1] = temp
+                  }
+               }
+            }
+            if (checkBox1.checked == true) {
+               text1.innerHTML = "Kartošanas masīvs(No L līdz M) : " + arrayReverse;
+               text1.style.display = "block";
+            } else {
+               text1.style.display = "none";
+            }
+         }
+
+         function clearArray() {
+            unsortedArray.length = 0;
+            array.length = 0;
+            arrayReverse.length = 0;
+            document.getElementById("textStock").innerHTML = "Jusu masīvs :";
+            document.getElementById("textSort").innerHTML = "Kartošanas masīvs(No M līdz L) : ";
+            document.getElementById("textSort1").innerHTML = "Kartošanas masīvs(No L līdz M) : ";
+            document.getElementById("textSort3").innerHTML = "Pozitīvas skaitļu daudzums : 0";
+            document.getElementById("textSort2").innerHTML = "Negatīvas skaitļu daudzums : 0";
+            document.getElementById("textSort4").innerHTML = "Kopējs ciparu daudzums : 0";
+         }
+
+         function sort2() {
+            var checkBox2 = document.getElementById("myCheck2");
+            var text2 = document.getElementById("textSort2");
+            var negatives = 0;
+            for (var i = 0; i < unsortedArray.length; i++) {
+               if (unsortedArray[i] < 0) {
+                  negatives++
+               }
+            }
+
+            if (checkBox2.checked == true) {
+               text2.style.display = "block";
+               text2.innerHTML = "Negatīvas skaitļu daudzums : " + negatives;
+            } else {
+               text2.style.display = "none";
+            }
+         }
+
+         function sort3() {
+            var checkBox3 = document.getElementById("myCheck3");
+            var text3 = document.getElementById("textSort3");
+            var positive = 0;
+            for (var i = 0; i < unsortedArray.length; i++) {
+               if (unsortedArray[i] >= 0) {
+                  positive++
+               }
+            }
+
+            if (checkBox3.checked == true) {
+               text3.style.display = "block";
+               text3.innerHTML = "Pozitīvas skaitļu daudzums : " + positive;
+            } else {
+               text3.style.display = "none";
+            }
+         }
+      </script>
+      <input type="checkbox" id="myCheck" onclick="sort();">Kartošana(No M
+      līdz L)<br>
+      <input type="checkbox" id="myCheck1" onclick="sort1();">Kartošana(No L
+      līdz M)<br>
+      <input type="checkbox" id="myCheck3" onclick="sort3();">Pozitīvas ciparu
+      skaitītājs<br>
+      <input type="checkbox" id="myCheck2" onclick="sort2();">Negatīvas ciparu
+      skaitītājs<br>
+      <input type="number" placeholder="Uzrakstīt vienu ciparu" name="text" id="numbers" />
+      <input type="button" id="Dot" value="Dot" onclick="give(), sort(), sort1(), sort2(), sort3();"> <br>
+      <h4 id="textStock">Jusu masīvs :</h4>
+      <h4 id="textSort" style="display:none"></h4>
+      <h4 id="textSort1" style="display:none"></h4>
+      <h4 id="textSort3" style="display:none"></h4>
+      <h4 id="textSort2" style="display:none"></h4>
+      <h4 id="textSort4">Kopējs ciparu daudzums : 0</h4>
+      <input type="button" id="Clear" value="Attīrīt" onclick="clearArray();"> <br>
+      <h1>Shēma ar burbuļu metode </h1>
+      <img src="1.png">
+   </div>
+</body>
+
+</html>

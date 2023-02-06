@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>MASSIVE</title>
+   <div align="center">
+      <h1 align="center">Massivu elementu pievienošana</h1>
+   </div>
+</head>
+
+<body>
+   <div align="center">
+
+      <script>
+         var array = [];
+         var unsortedArray = [];
+         var arrayReverse = [];
+
+         function give() {
+            var a = 1 * document.getElementById("numbers").value;
+            unsortedArray.push(" " + a);
+            array.push(a);
+            arrayReverse.push(a);
+
+            document.getElementById("textSort4").innerHTML = "Kopējs ciparu daudzums : " + array.length;
+            document.getElementById('textStock').innerHTML = "Jusu masīvs : " + unsortedArray;
+            document.getElementById('numbers').value = "";
+         }
+		 
+         function clearArray() {
+            unsortedArray.length = 0;
+            array.length = 0;
+            arrayReverse.length = 0;
+            document.getElementById("textStock").innerHTML = "Jusu masīvs :";
+            document.getElementById("textSort4").innerHTML = "Kopējs ciparu daudzums : 0";
+         }
+		 
+		 function save(){
+			var blob = new Blob([JSON.stringify(array)], {type: "text/javascript"});
+			var link = document.createElement("a");
+			link.setAttribute("href", URL.createObjectURL(blob));
+			link.setAttribute("download", "massive.txt");
+			link.click();
+		 }
+      </script>
+      
+      <input type="number" placeholder="Uzrakstīt vienu ciparu" name="text" id="numbers" />
+      <input type="button" id="Dot" value="Dot" onclick="give()"> 
+	  <input type="button" id="Save" value="Save" onclick="save()"> <br>
+      <h4 id="textStock">Jusu masīvs :</h4>
+      <h4 id="textSort4">Kopējs ciparu daudzums : 0</h4>
+      <input type="button" id="Clear" value="Attīrīt" onclick="clearArray();"> <br>
+   </div>
+	<h2 >Uzdevumu definīcija</h2>
+	<div>
+		<h3>
+		1) Massivu definēšana(ar input), lai lietotājs vara pievienot jaunus elementus.<br>
+		2) Izveidot pogu, kura pievieno jaunus elementus mūsu masivā.<br>
+		3) Izveidot pogu, kura saglabā massivu texta failā.<br> 
+		</h3>
+	</div>
+</body>
+
+</html>

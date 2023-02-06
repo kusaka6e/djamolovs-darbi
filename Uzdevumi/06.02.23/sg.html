@@ -1,0 +1,43 @@
+
+<!DOCTYPE html> 
+
+<html> 
+
+<head>
+<title>main</title>  
+<script>
+	var array = [];
+	var unsortedArray = [];
+	var arrayReverse = [];
+	
+function q(input) {
+  var file = input.files[0];
+
+  var a = new FileReader();
+
+	a.readAsText(file);
+
+  a.onload = function() {
+    console.log(a.result)
+            array.push(a.result);
+			unsortedArray.push(a.result);
+            arrayReverse.push(a);
+			console.log(array)
+  }
+
+}
+</script>
+
+
+<meta charset="UTF-8"> 
+
+</head> 
+
+  
+
+<body> 
+<input type="file" onchange="q(this)">
+<h4 id="textStock">Jusu masīvs :</h4>
+</body> 
+
+</html> 
