@@ -7,7 +7,7 @@
 <title>MASSIVE</title>
 
 <meta charset="UTF-8"> 
-<body bgcolor="##33cccc"> 
+<body bgcolor="##348D4C"> 
 <div>
       <h1>Darbs ar massiviem</h1>
    </div>
@@ -66,7 +66,7 @@ function q(input) {
       return a - b;
     });
  
-    document.getElementById('textStock').innerHTML ="Massivs no dokumenta: " + output;
+    document.getElementById('textStock').innerHTML ="Sakārtots massivs no dokumenta: " + output;
 	var b=output;
 	var blob = new Blob([JSON.stringify(b)], {type: "text/javascript"});
 			var link = document.createElement("a");
@@ -81,7 +81,7 @@ function q(input) {
 <div>
  <h4>1)Poga kura ražo n randomu skaitļus (līdz 100) massivā.</h4>
  <h4>2)Poga ar iespēju to pielādēt txt dokumenta.</h4>
- <h4>3)Poga, kura dot iespēju izmantot txt dokumentu ar massivu, lai sagrupēt massivu un uz reiz pieladē jau gatavo massivu.</h4>
+ <h4>3)Poga, kura dot iespēju izmantot txt dokumentu ar massivu, lai sagrupēt massivu un uz reiz pieladē jau sakārtoto massivu.</h4>
  </div>
 <div align="center">
 	<input type="number" placeholder="Ciparu skaits" name="text" id="numbers" />
