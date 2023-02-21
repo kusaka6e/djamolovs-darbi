@@ -1,0 +1,150 @@
+<!DOCTYPE html> 
+
+<html> 
+
+<head> 
+
+<title>MASSIVE</title>
+
+<meta charset="UTF-8"> 
+<link rel="stylesheet" href="styles.css">
+	<style>
+      html {
+        font-family: sans-serif;
+      }
+	input[type=file]::file-selector-button {
+  margin-right: 20px;
+  border: none;
+  background: #084cdf;
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+  transition: background .2s ease-in-out;
+}
+
+input[type=file]::file-selector-button:hover {
+  background: #0d45a5;
+	 } 
+      form {
+        background: #eee;
+        border-radius: 20px;
+        box-shadow: 1px 1px 1px black;
+        padding: 20px;
+        width: 300px;
+      }
+
+      div:first-of-type label {
+        margin-bottom: 20px;
+      }
+
+      label {
+        width: 130px;
+        float: left;
+        text-align: right;
+        padding: 4px;
+      }
+
+      input {
+        width: 130px;
+        float: left;
+      }
+
+      label, input {
+        font-size: 1em;
+        line-height: 1.5;
+      }
+
+      
+    </style>
+<div>
+      <h1>Darbs ar massiviem</h1>
+   </div>
+   
+</head> 
+
+  
+<body > 
+<script>
+var array = [];
+var txt = "Jusu masīvs : ";
+
+function give() {
+            var a = 1 * document.getElementById("numbers").value;
+			var b = 1 * document.getElementById("b").value;
+	for ( i = 0; i < a; i++ ) {
+			array.push( Math.round( Math.random() * 100 ));
+			}
+
+
+	for (i = 0; i < a; i++){
+		if (i > 0 && i % 30 === 0) {
+			txt += "<br>";
+		}
+			txt += array[i] + ", ";
+  }
+		
+			document.getElementById('elem').innerHTML = txt;
+			document.getElementById('numbers').value="";
+         }
+		 
+function save(){
+			var blob = new Blob([JSON.stringify(array)], {type: "text/javascript"});
+			var link = document.createElement("a");
+			link.setAttribute("href", URL.createObjectURL(blob));
+			link.setAttribute("download", "massive.txt");
+			link.click();
+		 }
+		 
+function q(input) {
+  var file = input.files[0];
+  var a = new FileReader();
+  var output = [];
+  var timenumber = "";
+  
+  a.readAsText(file);
+  a.onload = function() {
+    var contents = a.result;
+    contents = contents.replace(/[\[\]\s]/g, ''); // remove square brackets and whitespace
+    var numbers = contents.split(','); // split by comma
+    
+    for (var i = 0; i < numbers.length; i++) {
+      output.push(parseInt(numbers[i], 10));
+    }
+    
+    output.sort(function(a, b) {
+      return a - b;
+    });
+ 
+    document.getElementById('textStock').innerHTML ="Sakārtots massivs no dokumenta: " + output;
+	var b=output;
+	var blob = new Blob([JSON.stringify(b)], {type: "text/javascript"});
+			var link = document.createElement("a");
+			link.setAttribute("href", URL.createObjectURL(blob));
+			link.setAttribute("download", "massive(ready).txt");
+			link.click();
+  }
+  
+}
+ 
+</script>
+<body bgcolor="#33cccc"> 
+<div>
+<h4>1)Input(text), kurā lietotājs ievada n skaitļu.</h4>
+ <h4>2)Poga, kura ražo n randomu skaitļus (līdz 100) massivā.</h4>
+ <h4>3)Poga ar iespēju pielādēt massivu txt dokumentā.</h4>
+ <h4>4)Poga, kura dot iespēju izmantot txt dokumentu ar massivu, lai sagrupētu massivu un uz reiz pieladēt, jau sakārtoto massivu.</h4>
+ </div>
+<div>
+	<input type="number" placeholder="Ciparu skaits" name="text" id="numbers" />
+	<input type="button" id="Dot" value="Pievienot" onclick="give()"> <input type="button" id="Save" value="Save" onclick="save()"><br>
+	<h4 id="elem" maxlength="50"></h4>
+	<input type="file" onchange="q(this)" value="Kārtot">
+	<br>
+	<br>
+	<h4 id="textStock"></h4>
+</div>
+
+ 
+</body> 
+</html> 
